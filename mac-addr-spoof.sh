@@ -1,10 +1,19 @@
 #!/bin/bash
-clear
 if [ "$(id -u)" -ne 0 ]; then
     echo "Script requires root elevation!" >&2
     exit 1
 fi
 
+dt=$(date +"%Y-%m-%d_%H-%M-%S")
+save="mac_history_$dt.txt"
+
+# save back-up of original MAC address for both Ethernet and Wi-Fi interfaces
+wifi=$(ifconfig wlan0 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}')
+wired=$(ifconfig eth0 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}')
+echo "Wireless: "$wifi "/ Ethernet: "$wired >>$save
+sudo chattr -i $save
+
+clear
 RED='\033[0;31m'
 WHITE='\033[1;37m'
 GREEN='\033[0;32m'
