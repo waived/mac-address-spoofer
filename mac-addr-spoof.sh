@@ -25,9 +25,7 @@ printf "${GREEN}                        .odMM#MMbo.
                   8MMMMMMMMMM#MMMMMMMMMM8
                   MMMMMMMMMMM#MMMMMMMMMMM
                  8MMMMMMMMMMM#MMMMMMMMMMM8\n"
-
-
-printf "${GREEN}                 NMM ${WHITE}TOPOFTHEFOODCHAIN ${GREEN}MMM\n"
+printf "${GREEN}                 NMMM ${WHITE}CODED BY WAIVED ${GREEN}MMMM\n"
 printf "${GREEN}                 MMMMMMMMMMMM#MMMMMMMMMMMM
                  MMN     QMMM#MMMP     MMM
                  MMM    ${RED}@ ${GREEN};MM#MM     ${RED}@ ${GREEN}MMM
